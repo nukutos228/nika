@@ -4,17 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
 <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-<title>  ()</title>
-<meta name="keywords" content="Школьное расписание НИКА-Люкс НИКА-Софт  ">
-<link rel="icon" href="/static/images/icons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/static/images/icons/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/static/images/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/static/images/icons/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/static/images/icons/apple-touch-icon-180x180.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/static/images/icons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/static/images/icons/apple-touch-icon-120x120.png">
-<script type="text/javascript" src="/static/public/12210248_20261113083716.js"></script>
-<script type="text/javascript" src="/static/js/schedule.js"></script>
+<title> ()</title>
+<meta name="keywords" content="Школьное расписание НИКА-Люкс НИКА-Софт ">
+
+<link rel="icon" href="./static/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./static/images/icons/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./static/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./static/images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./static/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./static/images/icons/apple-touch-icon-120x120.png">
+
+<!-- Локальные файлы проекта -->
+<script type="text/javascript" src="./demo-data.js"></script>
+<script type="text/javascript" src="./schedule.js"></script>
 
 <style>
 body{margin:0;padding:0;}
@@ -22,17 +25,17 @@ html, body{height:100%;}
 
 @font-face {
   font-family: "RomanaScript";
-  src: local('☺'),             /* IE trick */
-        url('/static/images/RomanaScript.woff') format('woff'),
-        url('/static/images/RomanaScript.ttf') format('truetype'), /* Opera, Safari */
-        url('/static/images/RomanaScript.svg') format('svg'); /* iOS */
+  src: local('☺'),
+        url('./static/images/RomanaScript.woff') format('woff'),
+        url('./static/images/RomanaScript.ttf') format('truetype'),
+        url('./static/images/RomanaScript.svg') format('svg');
 }
 @font-face {
   font-family: "AlexBrush";
-  src: local('☺'),             /* IE trick */
-        url('/static/images/AlexBrush.woff') format('woff'),
-        url('/static/images/AlexBrush.ttf') format('truetype'), /* Opera, Safari */
-        url('/static/images/AlexBrush.svg') format('svg'); /* iOS */
+  src: local('☺'),
+        url('./static/images/AlexBrush.woff') format('woff'),
+        url('./static/images/AlexBrush.ttf') format('truetype'),
+        url('./static/images/AlexBrush.svg') format('svg');
 }
 
 a,p {
@@ -44,203 +47,158 @@ a,p {
     user-select: none;
 }
 .hidden {
-	  display: none;
+      display: none;
 }
 </style>
 
 <script type="text/javascript">
   document.oncontextmenu = function (){return false};
-	var schedule_check_url = 'https://raspisanie.nikasoft.ru/check/12210248.html';
-	var initial_schedule_id = '12210248_20261113083716.js';
 </script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	m[i].l=1*new Date();
-	for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-	k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	(window, document, "script", "https://mc.webvisor.org/metrika/tag_ww.js", "ym");
-  
-	var desktop_ym = 99398172;
-	var mobile_ym = 99398158;
-  </script>
-  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body onload="Init();">
-	<div id="desktop-version" style="width:100%; height:100%; min-width: 1000px; min-height: 700px; overflow-x: hidden; overflow-y: hidden;" class="hidden">
-		<div><img src="https://mc.yandex.ru/watch/99398172" style="position:absolute; left:-9999px;" alt="" /></div>
-			<div id="MainDiv" style="width:100%; height:100%; min-width: 1000px; min-height: 700px; overflow-x: hidden; overflow-y: hidden;"> 
-			 <canvas id="MainCanvas" style="border:0px;width:100%; height:100%; min-width: 1000px; min-height: 700px;"> 
-					   <div align="center">
-						   <table cols=2 width="100%" border="0px">
-							   <tr>
-								   <td width="200px">
-									   <td>
-					   <P style="color: red; font-weight: bold; font-size: 16px">Не удается отобразить расписание
-					 <P>К сожалению ваш браузер не поддерживает корректное отображение страниц HTML5
-				  <P style="color: red; font-weight: bold; font-size: 16px">Can't display schedule. Your browser doesn't support HTML5 correctly.
-								</table>
-							</div>		
-		</canvas> 		
-		</div>
-	<div id="AddElements">
-	<p id="copyright" style="position: absolute; color: #3CACC4; font-family: Geneva, sans-serif; font-weight: 600; font-size: 14px; width: 30em;">НИКА-Софт</p>
-	<a id="go_mobile" style="position: absolute; color: black; font-weight: bold; font-size: 12px; width: 14em;" href="javascript:void(0);">На мобильную версию &gt;&gt;</a> 
-	<a id="go_home" style="visibility: hidden; text-decoration:underline; position: absolute; color: white; font-family: Arial, sans-serif; font-weight: 300; font-size: 18px" href="javascript:void(0);">Школьный сайт</a> 
-	</div>
-	</div>
-	
-	<div id="mobile-version" class="hidden">
-	  <div><img src="https://mc.yandex.ru/watch/99398158" style="position:absolute; left:-9999px;" alt="" /></div>
-	  <div data-role="page" id="home">	
-      <div data-role="header" data-position="fixed" role="banner" id="home_header" data-theme="a">
-        <h2 id="school_name" role="heading" class="ui-title ui-nika-school-name"></h2>
-        <h2 id="city_name" role="heading" class="ui-title ui-nika-city-name"></h2>
-          <h2 id="refresh_dt" role="heading" class="ui-nika-refresh-dt"></h2>
-      </div>
-      <div data-role="content" id="home_content" class="ui-nika-home-content">	
-        <span id="favorite_btn" />
-      </div>
-      <div data-role="content" id="home_time" class="ui-nika-time-content">
-      </div>
-     </div><!-- /page -->
-    
-    <!-- Classes -->
-    <div data-role="page" id="classes">
-      <div data-role="header" data-position="fixed"  id="classes_header" data-theme="a">
-        <h2 id="classes_title" role="heading" class="ui-title ui-nika-list-title"></h2>
-      </div>
-      <div data-role="content" id="classes_content">
-      </div>		
-      
-    </div><!-- /page -->
-    
-    <!-- Teachers -->
-    <div data-role="page" id="teachers">
-      <div data-role="header" data-position="fixed" id="teachers_header" data-theme="a">
-        <h2 id="teachers_title" role="heading" class="ui-title ui-nika-list-title"></h2>
-      </div>
-      <div data-role="content" id="teachers_content">
-      </div>		
-    </div><!-- /page -->
-    
-    <!-- Class schedule -->
-    <div data-role="page" id="cls">
-      <div data-role="header" data-theme="a" >
-        <h2 id="cls_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
-        <a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#cls_calendar"  data-icon="grid" id="cls_calendar_link">Календарь</a></li>
-          <li><a href="#" data-icon="star" id="cls_favorite">Это мой класс</a></li>
-        </ul>
-      </div>
-    </div>
-      <div data-role="content" id="cls_content">
-        
-      <ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview" id="cls_schedule">
-        <li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
-          <a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_cls_day"></a>
-          <a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_cls_day"></a>
-          <h2 id="cls_sched_title" class="ui-title ui-nika-date-title"></h2>
-        </li>
-    
-      </ul>		
-      </div> 
-      
-    <div id="fav_popup" data-role="popup" data-theme="d" data-overlay-theme="d">
-      <div data-role="content" class="ui-content">
-         
-      </div>		
-    </div>  
-    </div><!-- /page -->
-    
-    <!-- Class calendar -->  
-    <div data-role="page" id="cls_calendar">
-      <div data-role="header" data-position="fixed" data-theme="a" >
-        <h2 id="cls_calendar_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
-        <a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
-      </div>
-      <div data-role="content" id="cls_content">
-        
-      <ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview">
-        <li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
-          <a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_cls_month"></a>
-          <a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_cls_month"></a>
-          <h2 id="cls_calendar_title" class="ui-title ui-nika-date-title"></h2>
-        </li>
-        <li data-corners="false" data-shadow="false" data-wrapperels="div" data-theme="c" 
-            class="ui-li" id="cls_calendar_body">
-        </li>
-      </ul>		
-      </div> 
-      
-    </div><!-- /page -->
-    
-    <!-- Teacher schedule -->
-    <div data-role="page" id="teach">
-      <div data-role="header" data-theme="a" >
-        <h2 id="teach_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
-        <a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#teach_calendar"  data-icon="grid" id="teach_calendar_link">Календарь</a></li>
-          <li><a href="#" data-icon="star" id="teach_favorite">В избранное</a></li>
-        </ul>
-      </div>
-      </div>
-      
-      <div data-role="content" id="teach_content">
-        <ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview" id="teach_schedule">
-          <li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
-            <a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_teach_day"></a>
-            <a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_teach_day"></a>
-            <h2 id="teach_sched_title" class="ui-title ui-nika-date-title"></h2>
-          </li>
-        
-        </ul>		
-      </div> 
-      
-    <div id="reload_popup" data-role="popup" data-theme="d" data-overlay-theme="d">
-      <div id="reload_popup_str" data-role="content" class="ui-content">
-         
-      </div>		
-    </div> 
-    <div id="fav_popup" data-role="popup" data-theme="d" data-overlay-theme="d">
-      <div id="fav_popup_str" data-role="content" class="ui-content">
-         
-      </div>		
-    </div>  
-    </div><!-- /page -->
-    
-    <!-- Teacher calendar -->  
-    <div data-role="page" id="teach_calendar">
-      <div data-role="header" data-position="fixed" data-theme="a" >
-        <h2 id="teach_calendar_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
-        <a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
-      </div>
-      <div data-role="content" id="teach_content">
-        
-      <ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview">
-        <li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
-          <a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_teach_month"></a>
-          <a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_teach_month"></a>
-          <h2 id="teach_calendar_title" class="ui-title ui-nika-date-title"></h2>
-        </li>
-        <li data-corners="false" data-shadow="false" data-wrapperels="div" data-theme="c" 
-            class="ui-li" id="teach_calendar_body">
-        </li>
-      </ul>		
-      </div> 
-    </div><!-- /page -->
-    
-    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
-      <span class="ui-icon ui-icon-loading"/>
-      <h1></h1>
-    </div>
-	
-	</div>
+<div id="desktop-version" style="width:100%; height:100%; min-width: 1000px; min-height: 700px; overflow-x: hidden; overflow-y: hidden;" class="hidden">
+
+<div id="MainDiv" style="width:100%; height:100%; min-width: 1000px; min-height: 700px; overflow-x: hidden; overflow-y: hidden;">
+<canvas id="MainCanvas" style="border:0px;width:100%; height:100%; min-width: 1000px; min-height: 700px;">
+<div align="center">
+<table cols=2 width="100%" border="0px">
+<tr>
+<td width="200px">
+<td>
+<p style="color: red; font-weight: bold; font-size: 16px">Не удается отобразить расписание</p>
+<p>К сожалению ваш браузер не поддерживает корректное отображение страниц HTML5</p>
+<p style="color: red; font-weight: bold; font-size: 16px">Can't display schedule. Your browser doesn't support HTML5 correctly.</p>
+</table>
+</div>
+</canvas>
+</div>
+<div id="AddElements">
+<p id="copyright" style="position: absolute; color: #3CACC4; font-family: Geneva, sans-serif; font-weight: 600; font-size: 14px; width: 30em;">НИКА-Софт</p>
+<a id="go_mobile" style="position: absolute; color: black; font-weight: bold; font-size: 12px; width: 14em;" href="javascript:void(0);">На мобильную версию &gt;&gt;</a>
+<a id="go_home" style="visibility: hidden; text-decoration:underline; position: absolute; color: white; font-family: Arial, sans-serif; font-weight: 300; font-size: 18px" href="javascript:void(0);">Школьный сайт</a>
+</div>
+</div>
+
+<div id="mobile-version" class="hidden">
+<div data-role="page" id="home">
+<div data-role="header" data-position="fixed" role="banner" id="home_header" data-theme="a">
+<h2 id="school_name" role="heading" class="ui-title ui-nika-school-name"></h2>
+<h2 id="city_name" role="heading" class="ui-title ui-nika-city-name"></h2>
+<h2 id="refresh_dt" role="heading" class="ui-nika-refresh-dt"></h2>
+</div>
+<div data-role="content" id="home_content" class="ui-nika-home-content">
+<span id="favorite_btn"></span>
+</div>
+<div data-role="content" id="home_time" class="ui-nika-time-content"></div>
+</div>
+
+<div data-role="page" id="classes">
+<div data-role="header" data-position="fixed" id="classes_header" data-theme="a">
+<h2 id="classes_title" role="heading" class="ui-title ui-nika-list-title"></h2>
+</div>
+<div data-role="content" id="classes_content"></div>
+</div>
+
+<div data-role="page" id="teachers">
+<div data-role="header" data-position="fixed" id="teachers_header" data-theme="a">
+<h2 id="teachers_title" role="heading" class="ui-title ui-nika-list-title"></h2>
+</div>
+<div data-role="content" id="teachers_content"></div>
+</div>
+
+<div data-role="page" id="cls">
+<div data-role="header" data-theme="a">
+<h2 id="cls_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
+<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
+<div data-role="navbar">
+<ul>
+<li><a href="#cls_calendar" data-icon="grid" id="cls_calendar_link">Календарь</a></li>
+<li><a href="#" data-icon="star" id="cls_favorite">Это мой класс</a></li>
+</ul>
+</div>
+</div>
+<div data-role="content" id="cls_content">
+<ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview" id="cls_schedule">
+<li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
+<a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_cls_day"></a>
+<a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_cls_day"></a>
+<h2 id="cls_sched_title" class="ui-title ui-nika-date-title"></h2>
+</li>
+</ul>
+</div>
+<div id="fav_popup" data-role="popup" data-theme="d" data-overlay-theme="d">
+<div data-role="content" class="ui-content"></div>
+</div>
+</div>
+
+<div data-role="page" id="cls_calendar">
+<div data-role="header" data-position="fixed" data-theme="a">
+<h2 id="cls_calendar_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
+<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
+</div>
+<div data-role="content" id="cls_content">
+<ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview">
+<li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
+<a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_cls_month"></a>
+<a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_cls_month"></a>
+<h2 id="cls_calendar_title" class="ui-title ui-nika-date-title"></h2>
+</li>
+<li data-corners="false" data-shadow="false" data-wrapperels="div" data-theme="c" class="ui-li" id="cls_calendar_body"></li>
+</ul>
+</div>
+</div>
+
+<div data-role="page" id="teach">
+<div data-role="header" data-theme="a">
+<h2 id="teach_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
+<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
+<div data-role="navbar">
+<ul>
+<li><a href="#teach_calendar" data-icon="grid" id="teach_calendar_link">Календарь</a></li>
+<li><a href="#" data-icon="star" id="teach_favorite">В избранное</a></li>
+</ul>
+</div>
+</div>
+<div data-role="content" id="teach_content">
+<ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview" id="teach_schedule">
+<li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
+<a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_teach_day"></a>
+<a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_teach_day"></a>
+<h2 id="teach_sched_title" class="ui-title ui-nika-date-title"></h2>
+</li>
+</ul>
+</div>
+<div id="reload_popup" data-role="popup" data-theme="d" data-overlay-theme="d">
+<div id="reload_popup_str" data-role="content" class="ui-content"></div>
+</div>
+<div id="fav_popup" data-role="popup" data-theme="d" data-overlay-theme="d">
+<div id="fav_popup_str" data-role="content" class="ui-content"></div>
+</div>
+</div>
+
+<div data-role="page" id="teach_calendar">
+<div data-role="header" data-position="fixed" data-theme="a">
+<h2 id="teach_calendar_header_str" role="heading" class="ui-title ui-nika-sched-title"></h2>
+<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left"></a>
+</div>
+<div data-role="content" id="teach_content">
+<ul data-role="listview" data-theme="c" data-divider-theme="c" class="ui-listview">
+<li data-role="list-divider" role="heading" class="ui-bar ui-li-divider ui-bar-c">
+<a href="#" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" id="prev_teach_month"></a>
+<a href="#" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right ui-nika-right" id="next_teach_month"></a>
+<h2 id="teach_calendar_title" class="ui-title ui-nika-date-title"></h2>
+</li>
+<li data-corners="false" data-shadow="false" data-wrapperels="div" data-theme="c" class="ui-li" id="teach_calendar_body"></li>
+</ul>
+</div>
+</div>
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+<span class="ui-icon ui-icon-loading"></span>
+<h1></h1>
+</div>
+</div>
 </body>
 </html>
